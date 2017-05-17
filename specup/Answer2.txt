@@ -1,0 +1,8 @@
+
+[문제2] 다음 데이터에 대해 컨텐츠 type별 수익 총액을 구하는 SQL문을 작성하시오.
+　- 답안은 Oracle로 작성하였습니다.
+
+SELECT c.id, c.subject, c.type, SUM(uc.profit) AS "type별 수익 총액" 
+FROM Content c LEFT OUTER JOIN UserContent uc ON c.id=uc.content_id 
+GROUP BY c.id, c.subject, c.type 
+ORDER BY c.id ASC;
