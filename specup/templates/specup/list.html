@@ -1,0 +1,33 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>SpecUp Coding-test Q. 1</title>
+</head>
+
+<body>
+<style>
+	th, td{
+		padding: 5px;
+	}
+	th{
+		background-color: lightgray;
+	}
+</style>
+<table border="1" width="300" style="border-collapse:collapse;">
+	<tr>
+		<th>사용자</th>
+		<th>포인트</th>
+		<th>포인트 사용 횟수</th>
+	</tr>
+{% for list in lists %}
+	<tr>
+		<td>{{ list.user }}</td>
+		<td>{{ list.point }}</td>
+		<td>{{ list.pointNumbers }}</td>
+	</tr>
+{% endfor %}
+</table>
+</body>
+
+</html>

@@ -6,8 +6,3 @@ class UserPointHistory(models.Model):
         default=timezone.now)
     user = models.ForeignKey('auth.User')
     delta = models.IntegerField(default=0)
-    
-
-class Admin_Point(models.Model):
-    point = models.IntegerField(default=0)
-    point_number = models.ManyToManyField(UserPointHistory)
